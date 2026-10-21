@@ -1,0 +1,89 @@
+--- Result ---
+Method     : Spline-smoothed + circle-fit
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1, step = 7
+Comparison : unsigned (magnitude)
+RMSE       : 0.04582
+Bias       : -0.00437
+N points   : 2835
+
+--- Result ---
+Method     : Spline-smoothed + least-squares circle
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1, step = 7
+Comparison : unsigned (magnitude)
+RMSE       : 0.06025
+Bias       : -0.00511
+N points   : 3075
+
+--- Result ---
+Method     : Spline-smoothed + tangent-angle
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1, step = 7
+Comparison : unsigned (magnitude)
+RMSE       : 0.04574
+Bias       : -0.00378
+N points   : 2835
+
+--- Result ---
+Method     : Spline-smoothed derivative (signed)
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1
+Comparison : unsigned (magnitude)
+RMSE       : 0.06936
+Bias       : -0.01220
+N points   : 3255
+
+--- Result ---
+Method     : Spline-smoothed + least-squares circle
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1, step = 15
+Comparison : unsigned (magnitude)
+RMSE       : 0.06122
+Bias       : +0.00084
+N points   : 2835
+
+--- Result ---
+Method     : Spline-smoothed + tangent-angle (signed)
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1.3, step = 1
+Comparison : unsigned (magnitude)
+RMSE       : 0.05406
+Bias       : -0.02402
+N points   : 3195
+
+--- Result ---
+Method     : Spline-smoothed + tangent-angle (signed)
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.2, tolMult = 1.3, step = 7
+Comparison : unsigned (magnitude)
+RMSE       : 0.03661
+Bias       : -0.01487
+N points   : 2835
+
+
+Adjusted Noise:
+--- Result ---
+Method     : Spline-smoothed + tangent-angle (signed)
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.24, tolMult = 0.774, step = 7
+Comparison : unsigned (magnitude)
+RMSE       : 0.10306
+Bias       : +0.01669
+N points   : 3280
+>> evaluate_method_script
+
+--- Result ---
+Method     : Spline-smoothed + tangent-angle (signed)
+Shape type : All (excluding SpatiallyVarying & FastVarying)
+Parameters : sigma = 0.24, tolMult = 0.774, step = 20
+Comparison : unsigned (magnitude)
+RMSE       : 0.02567
+Bias       : +0.00092
+N points   : 2500
+
+All (excluding SpatiallyVarying & FastVarying):
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.05534)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 1.29, step = 15 (RMSE = 0.03342)
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 1.29, step = 31 (RMSE = 0.02804) [Edge]
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 1.29, step = 15 (RMSE = 0.03203)

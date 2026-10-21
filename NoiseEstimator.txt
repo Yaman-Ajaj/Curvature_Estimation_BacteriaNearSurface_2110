@@ -1,0 +1,14 @@
+MAD:
+d    sigma        track med    track IQR    N tracks  
+2    0.1967       0.1967       0.0000       10509     
+3    0.2155       0.2155       0.0000       10491     
+4    0.2304       0.2304       0.0576       10473    
+
+Trimmed STD:
+Smallest spacing between distinct x values: 0.32500
+Median spacing: 0.32500
+Distinct values / total samples: 1193 / 227151
+d=2  trimmed sigma = 0.2804   plain sigma = 0.3216
+d=3  trimmed sigma = 0.2511   plain sigma = 0.2880
+d=4  trimmed sigma = 0.2412   plain sigma = 0.2764
+d=5  trimmed sigma = 0.2368   plain sigma = 0.2704

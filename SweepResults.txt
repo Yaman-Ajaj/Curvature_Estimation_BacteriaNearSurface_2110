@@ -1,0 +1,41 @@
+Circular:
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.02876)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 0.774, step = 20 (RMSE = 0.0006653) [Edge of the grid]
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 0.774, step = 31 (RMSE = 0.001537) [Edge of the grid]
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 0.774, step = 10 (RMSE = 0.003952)
+
+Elliptical:
+- Spline tolerance (spline-derivative method): Best multiplier = 0.8859 (RMSE = 0.06221)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 0.774, step = 7 (RMSE = 0.01586)
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 0.774, step = 15 (RMSE = 0.01545)
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 0.774, step = 7 (RMSE = 0.01478)
+
+Gentle Arc:
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.05182)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 1.29, step = 20 (RMSE = 0.03678) [Edge]
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 1.29, step = 31 (RMSE = 0.03516) [Edge]
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 1.29, step = 20 (RMSE = 0.03676) [Edge]
+
+Spatially Varying:
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.1002)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 0.774, step = 15 (RMSE = 0.08283)
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 1.29, step = 5 (RMSE = 0.1139) [Edge]
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 0.774, step = 15 (RMSE = 0.08277)
+
+Fast Varying:
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.086)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 1.29, step = 20 (RMSE = 0.08529) [Edge]
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 1.29, step = 21 (RMSE = 0.08559)
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 1.29, step = 20 (RMSE = 0.08529) [Edge]
+
+All (excluding SpatiallyVarying & FastVarying):
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.05534)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 1.29, step = 15 (RMSE = 0.03342)
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 1.29, step = 31 (RMSE = 0.02804) [Edge]
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 1.29, step = 15 (RMSE = 0.03203)
+
+All Tracks:
+- Spline tolerance (spline-derivative method): Best multiplier = 1.129 (RMSE = 0.06916)
+- Spline tolerance x step (circle-fit method): Best: tolMult = 0.774, step = 20 (RMSE = 0.06311) [Edge]
+- Spline tolerance x step (least-squares circle method): Best: tolMult = 1.29, step = 21 (RMSE = 0.06653)
+- Spline tolerance x step (tangent-angle method): Best: tolMult = 0.774, step = 20 (RMSE = 0.06242) [Edge]

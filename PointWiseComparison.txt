@@ -1,0 +1,40 @@
+--- Relative error (%) by file and shape type ---
+resultsFile                                   shape               N     Median       Mean        p90
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step1_20260923_183609.mat Circular          832       6.22      14.13      39.94
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step1_20260923_183609.mat Elliptical       1171       6.48      14.66      45.40
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step1_20260923_183609.mat GentleArc        1212      23.36      42.83      95.61
+
+--- Relative error (%) by file and shape type ---
+resultsFile                                   shape               N     Median       Mean        p90
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step8_20260923_183948.mat Circular          692       2.34       3.52       6.91
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step8_20260923_183948.mat Elliptical       1031       4.85       7.68      18.22
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step8_20260923_183948.mat GentleArc        1072      13.95      31.02      79.77
+
+--- Relative error (%) by file and shape type ---
+resultsFile                                   shape               N     Median       Mean        p90
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step10_20260923_184119.mat Circular          652       1.69       2.48       4.89
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step10_20260923_184119.mat Elliptical        991       5.39       7.97      19.12
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step10_20260923_184119.mat GentleArc        1032      12.35      27.40      73.78
+
+--- Relative error (%) by file and shape type ---
+resultsFile                                   shape               N     Median       Mean        p90
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_leastSquaresCircle_sig02_m1_w9_step5_20260923_191909.mat Circular          772       4.17       7.67      17.41
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_leastSquaresCircle_sig02_m1_w9_step5_20260923_191909.mat Elliptical       1111       5.52      10.20      22.53
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_leastSquaresCircle_sig02_m1_w9_step5_20260923_191909.mat GentleArc        1152      17.59      38.78      88.67
+
+--- Relative error (%) by file and shape type ---
+resultsFile                                   shape               N     Median       Mean        p90
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step5_20260923_191953.mat Circular          752       3.58       6.31      14.01
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step5_20260923_191953.mat Elliptical       1091       5.19       9.20      19.01
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step5_20260923_191953.mat GentleArc        1132      18.58      35.69      86.11
+
+--- Summary by type ---
+Circular    : n = 10 tracks, points = 50 to 113 (mean 85.2), total = 852
+Elliptical  : n = 10 tracks, points = 52 to 192 (mean 119.1), total = 1191
+GentleArc   : n = 10 tracks, points = 52 to 194 (mean 123.2), total = 1232
+
+--- Relative error (%) by file and shape type ---
+resultsFile                                   shape               N     Median       Mean        p90
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step5_20260923_191953.mat Circular          680       3.23       4.26       9.33
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step5_20260923_191953.mat Elliptical        889       4.26       5.34      11.48
+C:\Users\Yaman Ajaj\Desktop\IPSP\Bachelor Thesis\CurvatureAnalysis(21.09.2026)\curvatureResults_Noise_splinesmoothed_circlefit_sig02_m1_step5_20260923_191953.mat GentleArc         902       9.97      26.49      71.81
