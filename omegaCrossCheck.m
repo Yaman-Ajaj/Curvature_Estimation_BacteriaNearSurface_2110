@@ -11,7 +11,7 @@ framesPerSec = 15;
 umPerUnit    = 1;
 useAbs       = false;  % true: mean|dtheta| and mean|k|; false: |mean dtheta| and |mean k|
 minPts       = 5;      % min finite k values per section
-cleanOnly    = false;
+cleanOnly    = true;
 minFrames    = 15;
 nBoot        = 1000;
 
