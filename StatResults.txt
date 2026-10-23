@@ -1,0 +1,120 @@
+sectionRadii.m:
+Most common meanK bin: -0.006 to 0.001 (867 of 12630 sections)
+
+--- Overall section statistics ---
+Valid sections: 12498
+Median typical radius: 26.301 um
+Mean typical radius: 46.974 um
+Radius IQR (25th-75th): 15.727 - 48.049 um
+Radius 5th-95th percentiles: 6.359 - 133.668 um
+
+Median mean absolute curvature: 0.0377 1/um
+Curvature 25th-75th percentiles: 0.0204 - 0.0631 1/um
+12630 sections, 8169 tracks
+Surface 1: 6234 sections | median R_typical = 25.10 | median R_net = 31.98
+Surface 2: 6396 sections | median R_typical = 27.67 | median R_net = 34.18
+
+speedHistogram.m:
+--- Section mean speeds ---
+Number of sections: 12630
+Mean: 30.17 um/s
+Median: 30.78 um/s
+Standard deviation: 6.90 um/s
+IQR (25th-75th): 25.95 - 35.10 um/s
+Percentiles (5/10/90/95): 17.63 20.92 38.43 40.33 um/s
+Modal speed bin: 31.00 - 32.00 um/s (770 sections)
+
+--- Pooled single-frame step speeds ---
+Number of steps: 558002
+Mean: 31.09 um/s
+Median: 32.49 um/s
+Standard deviation: 9.49 um/s
+IQR (25th-75th): 25.21 - 38.08 um/s
+Percentiles (5/10/90/95): 13.26 17.64 42.17 44.36 um/s
+Modal speed bin: 35.00 - 36.00 um/s (25960 steps)
+
+curvatureVsSpeed CLEAN:
+9521 sections, 2 outside the x-limit and not shown
+Pearson r = -0.078 (N = 9519)
+sections per track: median 1, mean 1.4, max 7
+speed percentiles 1/2/5/10: 13.52 15.41 19.12 22.21
+
+--- All sections ---
+all sections               robust b = -1.29 (95% CI -1.37 to -1.21)  | OLS b = -1.30 | rho = -0.310 | N = 9521
+drop slowest 1%            robust b = -1.24                          | OLS b = -1.28 | rho = -0.297 | N = 9426
+drop slowest 2%            robust b = -1.24                          | OLS b = -1.28 | rho = -0.289 | N = 9331
+drop slowest 5%            robust b = -1.32                          | OLS b = -1.36 | rho = -0.276 | N = 9045
+drop slowest 10%           robust b = -1.46                          | OLS b = -1.48 | rho = -0.265 | N = 8569
+   19.1175   24.1811   -1.3045
+   24.1811   26.8874   -0.3196
+   26.8874   28.9708   -0.4946
+   28.9708   30.6844   -1.5410
+   30.6844   32.2950   -2.0434
+   32.2950   33.8950   -0.3491
+   33.8950   35.6347   -2.5571
+   35.6347   37.5859   -2.5318
+   37.5859   40.8059   -3.1376
+
+
+                       slowest 1%   the rest
+N sections                     95       9426
+median speed                 11.6       31.6
+median nFrames                 36         42
+% step reduced                0.0        0.0
+% on z>0 surface             65.3       49.9
+median |k|                  0.155      0.029
+
+curvatureVsSpeed ALL:
+12630 sections, 6 outside the x-limit and not shown
+Pearson r = -0.066 (N = 12624)
+sections per track: median 1, mean 1.5, max 9
+speed percentiles 1/2/5/10: 11.89 14.35 17.63 20.91
+
+--- All sections ---
+all sections               robust b = -1.54 (95% CI -1.61 to -1.46)  | OLS b = -0.70 | rho = -0.351 | N = 12614
+drop slowest 1%            robust b = -1.54                          | OLS b = -1.53 | rho = -0.344 | N = 12488
+drop slowest 2%            robust b = -1.53                          | OLS b = -1.54 | rho = -0.333 | N = 12362
+drop slowest 5%            robust b = -1.57                          | OLS b = -1.86 | rho = -0.317 | N = 11983
+drop slowest 10%           robust b = -1.65                          | OLS b = -2.25 | rho = -0.298 | N = 11353
+   17.6312   23.0619   -1.5827
+   23.0619   25.9535   -1.1056
+   25.9535   28.1315   -0.7144
+   28.1315   29.9275   -1.9955
+   29.9275   31.6142   -1.9319
+   31.6142   33.2694   -1.0391
+   33.2694   35.0983   -1.7151
+   35.0983   37.0927   -2.9001
+   37.0927   40.3327   -2.8838
+
+
+                       slowest 1%   the rest
+N sections                    126      12488
+median speed                  8.9       30.9
+median nFrames                 14         33
+% step reduced               57.1       24.2
+% on z>0 surface             58.7       49.3
+median |k|                  0.180      0.030
+
+--- Clean sections (nFrames >= 15, step not reduced): 9521 of 12614 ---
+clean sections             robust b = -1.29 (95% CI -1.37 to -1.21)  | OLS b = -1.30 | rho = -0.310 | N = 9521
+clean, drop slowest 1%     robust b = -1.24                          | OLS b = -1.28 | rho = -0.297 | N = 9426
+clean, drop slowest 5%     robust b = -1.32                          | OLS b = -1.36 | rho = -0.276 | N = 9045
+Scatter of log k around the robust fit: sd = 1.05 (upper bound: includes estimator noise)
+
+omegaCrossCheck CLEAN:
+N sections = 9521
+b (log k vs log v, robust)           = -1.29  (95% CI -1.37 to -1.21)
+1 + b (predicted omega slope)        = -0.29  (95% CI -0.37 to -0.21)
+omega slope, direct (robust)         = -0.25  (95% CI -0.33 to -0.17)
+omega slope, direct (OLS)            = -0.20
+Spearman rho (omega vs speed)        = -0.085
+Difference (direct - predicted)      = +0.04
+
+omegaCrossCheck ALL:
+N sections = 12614
+b (log k vs log v, robust)           = -1.54  (95% CI -1.61 to -1.46)
+1 + b (predicted omega slope)        = -0.54  (95% CI -0.61 to -0.46)
+omega slope, direct (robust)         = -0.42  (95% CI -0.49 to -0.35)
+omega slope, direct (OLS)            = -0.40
+Spearman rho (omega vs speed)        = -0.126
+Difference (direct - predicted)      = +0.12
