@@ -8,7 +8,7 @@
 % Also plots a histogram of the section mean curvature (meanK), colored by surface.
 
 clear; 
-%clc;
+clc;
 
 %% Settings
 umPerUnit = 1;     % physical length of one position unit (SET THIS, see note 1)
@@ -62,7 +62,7 @@ T.R_typical = 1 ./ T.meanAbsK;
 T.R_median  = 1 ./ T.medAbsK;
 
 %% Histogram of meanK across sections, split by surface
-binW  = 0.05;                                         % bin width, in curvature units (1/unit)
+binW  = 0.007;                                         % bin width, in curvature units (1/unit)
 lim   = max(0.3, prctile(abs(S.meanK), 99));          % display range, at least +-0.3
 edges = -lim : binW : lim;
 cols  = {[0.85 0.33 0.10], [0.00 0.45 0.74]};         % surface 1 (z>0), surface 2 (z<0)
@@ -83,7 +83,34 @@ fprintf('Most common meanK bin: %.3f to %.3f (%d of %d sections)\n', ...
     e(iMax), e(iMax+1), cnt(iMax), height(S));
 
 %% Report and save
+
+% Additional summary statistics
+
+fprintf('\n--- Overall section statistics ---\n');
+
+% Typical radius: reciprocal of mean absolute curvature
+r = S.R_typical;
+r = r(isfinite(r) & r > 0 & r < 1e4);
+
+fprintf('Valid sections: %d\n', numel(r));
+fprintf('Median typical radius: %.3f um\n', median(r));
+fprintf('Mean typical radius: %.3f um\n', mean(r));
+fprintf('Radius IQR (25th-75th): %.3f - %.3f um\n', ...
+    prctile(r,25), prctile(r,75));
+fprintf('Radius 5th-95th percentiles: %.3f - %.3f um\n', ...
+    prctile(r,5), prctile(r,95));
+
+% Absolute curvature: complementary description of turning strength
+kAbs = S.meanAbsK;
+kAbs = kAbs(isfinite(kAbs) & kAbs > 0);
+
+fprintf('\nMedian mean absolute curvature: %.4f 1/um\n', ...
+    median(kAbs));
+fprintf('Curvature 25th-75th percentiles: %.4f - %.4f 1/um\n', ...
+    prctile(kAbs,25), prctile(kAbs,75));
 fprintf('%d sections, %d tracks\n', height(S), height(T));
+
+
 for g = 1:2
     m = S.surface == g;
     fprintf('Surface %d: %4d sections | median R_typical = %.2f | median R_net = %.2f\n', ...
