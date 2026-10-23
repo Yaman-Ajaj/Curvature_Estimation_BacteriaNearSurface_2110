@@ -45,9 +45,42 @@ for t = 1:numel(allTrackResults)
 end
 
 %% Report
-fprintf('%d sections | mean %.1f, median %.1f um/s\n', numel(secSpeed), mean(secSpeed), median(secSpeed));
-fprintf('Section speed percentiles 1/2/5/10/90/99: %.1f %.1f %.1f %.1f %.1f %.1f\n', ...
-    prctile(secSpeed, [1 2 5 10 90 99]));
+
+% Section-level speeds: each section contributes one value
+fprintf('\n--- Section mean speeds ---\n');
+fprintf('Number of sections: %d\n', numel(secSpeed));
+fprintf('Mean: %.2f um/s\n', mean(secSpeed));
+fprintf('Median: %.2f um/s\n', median(secSpeed));
+fprintf('Standard deviation: %.2f um/s\n', std(secSpeed));
+fprintf('IQR (25th-75th): %.2f - %.2f um/s\n', ...
+    prctile(secSpeed,25), prctile(secSpeed,75));
+fprintf('Percentiles (5/10/90/95): %.2f %.2f %.2f %.2f um/s\n', ...
+    prctile(secSpeed,[5 10 90 95]));
+
+% Modal bin using the same bin width as the histogram
+edgesSec = 0:binW:(ceil(max(secSpeed)/binW)*binW + binW);
+[countSec, edgesSec] = histcounts(secSpeed, edgesSec);
+[~, idxSec] = max(countSec);
+fprintf('Modal speed bin: %.2f - %.2f um/s (%d sections)\n', ...
+    edgesSec(idxSec), edgesSec(idxSec+1), countSec(idxSec));
+
+% Pooled single-frame speeds: each step contributes one value
+fprintf('\n--- Pooled single-frame step speeds ---\n');
+fprintf('Number of steps: %d\n', numel(stepSpeed));
+fprintf('Mean: %.2f um/s\n', mean(stepSpeed));
+fprintf('Median: %.2f um/s\n', median(stepSpeed));
+fprintf('Standard deviation: %.2f um/s\n', std(stepSpeed));
+fprintf('IQR (25th-75th): %.2f - %.2f um/s\n', ...
+    prctile(stepSpeed,25), prctile(stepSpeed,75));
+fprintf('Percentiles (5/10/90/95): %.2f %.2f %.2f %.2f um/s\n', ...
+    prctile(stepSpeed,[5 10 90 95]));
+
+% Modal bin for pooled step speeds, using the histogram's bin width
+edgesStep = 0:binW:(ceil(prctile(stepSpeed,99.5)/binW)*binW + binW);
+[countStep, edgesStep] = histcounts(stepSpeed, edgesStep);
+[~, idxStep] = max(countStep);
+fprintf('Modal speed bin: %.2f - %.2f um/s (%d steps)\n', ...
+    edgesStep(idxStep), edgesStep(idxStep+1), countStep(idxStep));
 
 %% Plots
 figure('Color','w');
